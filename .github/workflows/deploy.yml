@@ -40,7 +40,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: vitorkenzo299/prova-inter:${{ github.sha }}
+          tags: |
+            vitorkenzo299/prova-inter:latest
+            vitorkenzo299/prova-inter:${{ github.sha }}
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
